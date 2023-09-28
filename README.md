@@ -1,4 +1,4 @@
-# My Star Rating Component
+# Star Rating Component
 
 Star Rating Component is a reusable React component that allows you to add a star rating input to your web applications.
 
@@ -9,47 +9,47 @@ Star Rating Component is a reusable React component that allows you to add a sta
     npm install star-rating
 
 ## Usage
-Import the StarRating component and use it in your React application.
+- Import the StarRating component and use it in your React application.
 
-```bash
-import React from 'react';
-import { StarRating } from 'my-star-rating-component';
-
-function MyComponent() {
-  return (
-    <div>
-      <h1>Rate this:</h1>
-      <StarRating
-        number={5}            // Number of stars 
-        defaultRating={3}    // Default rating (optional)
-        color="#ff0c"        // Star color (optional)
-        size={30}             // Star size (optional)
-        className={'myClass'}   // Custom style (optional)
-        messages={["Terrible", "Bad", "Okay", "Good", "Amazing"]} // Custom messges instead of numbers (optional)
-      />
-    </div>
-  );
-}
-export default MyComponent;
-
+    ```bash
+    import React from 'react';
+    import { StarRating } from 'star-rating';
+    
+    function MyComponent() {
+      return (
+        <div>
+          <h1>Rate this:</h1>
+          <StarRating
+            number={5}            // Number of stars 
+            defaultRating={3}    // Default rating (optional)
+            color="#ff0c"        // Star color (optional)
+            size={30}             // Star size (optional)
+            className={'myClass'}   // Custom style (optional)
+            messages={["Terrible", "Bad", "Okay", "Good", "Amazing"]} // Custom messges instead of numbers (optional)
+          />
+        </div>
+      );
+    }
+    export default MyComponent;
+    
 - To get the value of the stars rating use onSetRating props like this 
-
-```bash
-function MyComponent() {
-    const [rating, setRating] = useState()
-  return (
-    <div>
-      <h1>Rate this:</h1>
-      <StarRating
-        number={5}            // Number of stars (optional)
-        defaultRating={3}    // Default rating (optional)
-        color="#ff0c"        // Star color (optional)
-        onSetRating= {setRating} // (optional)
-        >
-        <p> You rated this {rating} </p>
-    </div>
-  );
-}
+    
+    ```bash
+    function MyComponent() {
+        const [rating, setRating] = useState()
+      return (
+        <div>
+          <h1>Rate this:</h1>
+          <StarRating
+            number={5}            // Number of stars (optional)
+            defaultRating={3}    // Default rating (optional)
+            color="#ff0c"        // Star color (optional)
+            onSetRating= {setRating} // (optional)
+            >
+            <p> You rated this {rating} </p>
+        </div>
+      );
+    }
 
 ## Props
 
